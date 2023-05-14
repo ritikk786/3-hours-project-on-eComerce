@@ -12,6 +12,7 @@ const Items = () => {
     return (
         <div>
             <ul className={classes.ul}>
+
                 {ctx.candys.map((item) => (
                     <li>
                         <h4>{item.candyname}</h4>
@@ -19,9 +20,9 @@ const Items = () => {
                         <p>{item.discription}</p><span>rs<span className={classes.price}>{item.price}</span></span>
                         </div>
                         <div>
-                        <Button variant="info" className="m-1">Buy 1</Button>
-                        <Button variant="info" className="m-1">Buy 2</Button>
-                        <Button variant="info" className="m-1">Buy 3</Button>
+                        <Button onClick={()=>ctx.addtocart(item,1)} variant="info" className="m-1">Buy 1</Button>
+                        <Button onClick={()=>ctx.addtocart(item,2)} variant="info" className="m-1">Buy 2</Button>
+                        <Button onClick={()=>ctx.addtocart(item,3)} variant="info" className="m-1">Buy 3</Button>
                         </div>
                     </li>
 
